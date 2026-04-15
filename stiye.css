@@ -1,0 +1,24 @@
+#fondo {
+    background-color: rgb(0, 68, 255);
+}
+
+body {
+    background-image: url("https://inhouse.feban.net/wp-content/uploads/2021/02/4930343-scaled.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+h3 { 
+    color: red;
+
+}
+
+
+#otro { 
+    color: rgb(55, 0, 255);
+    align-items: center;
+    text-align: center;
+
+}
