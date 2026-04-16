@@ -1,11 +1,3 @@
-#titulo-uno {
-    color: red;
-    background-color: black;
-}
-
-#palabra {
-    color: black;
-}
 
 
 h3 { 
@@ -15,8 +7,9 @@ h3 {
 
 
 .pantalla {
+    position:relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,34 +18,20 @@ h3 {
     background-attachment: fixed;
 }
 
-
-.imagen-uno {
-    background-color: rgb(244, 238, 238);
+.fondoAzulGradiente1 {
+    background: linear-gradient(145deg, #1e3c72 0%, #9aaed2 100%) !important;
+    border: none !important;  
 }
 
-
-.imagen-dos {
-    background-image: url('tu-imagen-2.jpg');
-    color: white;
+.fondoAzulGradiente2 {
+    background-color: none !important;
+    border: none !important;  
+    backdrop-filter: blur(10px);
 }
 
-.header-fijo {
-  /* 1. Lo fijamos en la pantalla */
-  position: fixed; 
-  
-  /* 2. Lo pegamos al techo y a los lados */
-  top: 0;
-  left: 0;
-  width: 100%;
-  
-  /* 3. Estética básica */
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 15px;
-  text-align: center;
-  
-  /* 4. Aseguramos que siempre esté "por encima" de otros elementos */
-  z-index: 1000;
+.fondoAzulGradiente3 {
+    background: linear-gradient(145deg, #b8d1ff 0%, #e3eaf7 100%) !important;
+    border: none !important;  
 }
 
 body {
@@ -66,6 +45,9 @@ body {
     /* 1. Aumentamos el tamaño arriba y abajo (ej: 20px) */
     padding-top: 30px !important;
     padding-bottom: 30px !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /* Para que se vea con ese grosor de la foto */
+    letter-spacing: -0.02em;
     
     /* 2. Transición suave para cuando cambie la sombra */
     transition: all 0.3s ease;
@@ -85,14 +67,16 @@ body {
 
   /* 1. Cambia el color del nombre de la página (Brand) */
 .navbar-brand {
-    color: #000000 !important; /* Un amarillo dorado, por ejemplo */
-    font-weight: bold;
+    color: #6ba3ff !important; /* Un amarillo dorado, por ejemplo */
+    font-weight: bold !important;
+    font-size: 2.5rem !important;
+    font-family: "Playfair Display", serif !important;
 
 }
 
 /* 2. Cambia el color de los enlaces del menú */
 .navbar .nav-link {
-    color: #000000 !important; /* Blanco */
+    color: #ffffff !important; /* Blanco */
 }
 
 /* 3. ¡Extra! Cambia el color cuando pasas el mouse (Hover) */
