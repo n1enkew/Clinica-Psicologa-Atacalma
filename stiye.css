@@ -27,8 +27,7 @@ h3 {
 
 
 .imagen-uno {
-    background-image: url('https://inhouse.feban.net/wp-content/uploads/2021/02/4930343-scaled.jpg');
-    color: white;
+    background-color: rgb(244, 238, 238);
 }
 
 
@@ -47,8 +46,8 @@ h3 {
   width: 100%;
   
   /* 3. Estética básica */
-  background-color: #bdbdbd;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   padding: 15px;
   text-align: center;
   
@@ -60,4 +59,44 @@ body {
   /* ¡IMPORTANTE! Como el header ahora "flota", tapará el inicio del contenido. 
      Debes darle un margen al body igual a la altura del header. */
   margin-top: 70px; 
+}
+
+/* Customizamos nuestra barra */
+.navbar {
+    /* 1. Aumentamos el tamaño arriba y abajo (ej: 20px) */
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    
+    /* 2. Transición suave para cuando cambie la sombra */
+    transition: all 0.3s ease;
+  }
+  
+  /* Esta clase hará que la sombra aparezca */
+  .shadow-scroll {
+    box-shadow: 0px 1px 2px 0px rgba(191, 191, 191, 0.692);
+    padding-top: 20px !important; /* Opcional: que se encoja un poquito al bajar */
+    padding-bottom: 20px !important;
+
+    /* Aseguramos que ocupe todo el ancho */
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  /* 1. Cambia el color del nombre de la página (Brand) */
+.navbar-brand {
+    color: #000000 !important; /* Un amarillo dorado, por ejemplo */
+    font-weight: bold;
+
+}
+
+/* 2. Cambia el color de los enlaces del menú */
+.navbar .nav-link {
+    color: #000000 !important; /* Blanco */
+}
+
+/* 3. ¡Extra! Cambia el color cuando pasas el mouse (Hover) */
+.navbar .nav-link:hover {
+    color: #ccd0ff !important;
+    text-decoration: underline;
 }
