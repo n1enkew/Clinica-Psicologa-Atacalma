@@ -1,6 +1,8 @@
 #titulo-uno {
     color: red;
+    background-color: black;
 }
+
 #palabra {
     color: black;
 }
@@ -33,4 +35,29 @@ h3 {
 .imagen-dos {
     background-image: url('tu-imagen-2.jpg');
     color: white;
+}
+
+.header-fijo {
+  /* 1. Lo fijamos en la pantalla */
+  position: fixed; 
+  
+  /* 2. Lo pegamos al techo y a los lados */
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+  /* 3. Estética básica */
+  background-color: #bdbdbd;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  
+  /* 4. Aseguramos que siempre esté "por encima" de otros elementos */
+  z-index: 1000;
+}
+
+body {
+  /* ¡IMPORTANTE! Como el header ahora "flota", tapará el inicio del contenido. 
+     Debes darle un margen al body igual a la altura del header. */
+  margin-top: 70px; 
 }
