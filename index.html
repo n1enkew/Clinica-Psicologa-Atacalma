@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atacalma</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
 <body id="fondo">
-
     <nav class="navbar navbar-expand-lg fondoAzulGradiente2 fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand ps-5" href="#">Atacalma</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link ps-4" href="#Sobre Nosotros">Sobre Nosotros</a>
+                <a class="nav-link ps-4" href="#Sobre-Nosotros">Sobre Nosotros</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link ps-4" href="#servicios">Servicios</a>
@@ -45,9 +48,25 @@
         });
       </script>
 
-    <section class="pantalla fondoAzulGradiente1">
-        <h1>Bienvenidos a Atacalma</h1>
-        <p>Tu espacio de bienestar emocional</p>
+    <section class="pantalla fondoAzulGradiente1"> <div class="container">
+        <div class="row align-items-center"> <div class="col-md-6 text-white">
+          <span class="subtitulo1">PSICÓLOGA · TRANSFORMACIÓN CONSCIENTE</span>
+          <h1 class="titulo-principal">Ingrid Miranda <br> <span>Psicóloga Clínica</span></h1>
+          <p class="descripcion">
+            Acompaño procesos de transformación emocional desde una mirada humana, consciente y científica.
+          </p>
+
+          <div class="mt-4">
+          <a href="#" class="btn btn-primario">Agendar citas</a>
+          <a href="#" class="btn btn-contorno ms-2">Conóceme</a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Ingrid Alamos" class="imagen-perfil">
+      </div>
+
+    </div>
+  </div>
     </section>
 
     <section class="pantalla fondoAzulGradiente3">
@@ -59,7 +78,7 @@
         <h1>Bienvenidos a Atacalma</h1>
         <p>Tu espacio de bienestar emocional</p>
     </section>
-    
+
     <main>
         <section id="Sobre Nosotros">
             <h2>Sobre Nosotros</h2>

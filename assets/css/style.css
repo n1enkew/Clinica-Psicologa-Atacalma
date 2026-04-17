@@ -1,11 +1,3 @@
-
-
-h3 { 
-    color: red;
-
-}
-
-
 .pantalla {
     position:relative;
     width: 100%;
@@ -37,8 +29,9 @@ h3 {
 body {
   /* ¡IMPORTANTE! Como el header ahora "flota", tapará el inicio del contenido. 
      Debes darle un margen al body igual a la altura del header. */
-  margin-top: 70px; 
-}
+  margin-top: 0px; 
+  background: linear-gradient(145deg, #0b162a 0%, #9aaed2 100%) !important;
+} /* Posiblemente no relevante ya que solo hace que las secciones empiecen despues
 
 /* Customizamos nuestra barra */
 .navbar {
@@ -83,4 +76,59 @@ body {
 .navbar .nav-link:hover {
     color: #ccd0ff !important;
     text-decoration: underline;
+}
+
+.subtitulo1 {
+    font-size: 0.8rem;
+    letter-spacing: -0.02em;
+    color: #ccd0ff;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /* Para que se vea con ese grosor de la foto */
+    letter-spacing: 0.2em;
+}
+
+/* 3. La imagen con bordes redondeados */
+.imagen-perfil {
+    max-width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.titulo-principal {
+    font-family: 'Playfair Display', serif; /* Una letra con "patitas" (Serif) elegante */
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.titulo-principal span {
+    color: #6ba3ff; 
+}
+
+.descripcion {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    max-width: 450px; /* Para que el texto no se estire demasiado */
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.btn-primario {
+    background-color: #00adef !important;
+    color: white !important;
+    padding: 12px 30px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    border: none !important;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-contorno {
+    border: 2px solid #00adef!important;
+    color: white!important;
+    padding: 10px 30px!important;
+    border-radius: 8px!important;
+    background: transparent!important;
+    font-family: 'Inter', sans-serif;
 }
