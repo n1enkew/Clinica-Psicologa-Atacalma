@@ -1,4 +1,4 @@
-.pantalla {
+.pantalla1 {
     position:relative;
     width: 100%;
     min-height: 100vh;
@@ -108,6 +108,7 @@
     font-size: 5rem;
     font-weight: 700;
     line-height: 1.1;
+    letter-spacing: -1px;
 }
 
 .titulo-principal span {
@@ -206,4 +207,33 @@
 /* Opcional: que la imagen se agrande un poquito al tocarla */
 .contenedor-perfil:hover .imagen-perfil {
   transform: scale(1.1);
+}
+
+/* Personalizamos la barra vertical linea 54 */
+.border-start {
+    /* Esto controla que la línea no sea tan alta como toda la sección */
+    border-left: 2px solid rgba(255, 255, 255, 0.5) !important; 
+    
+    /* Añadimos un margen arriba y abajo para que no toque los bordes del texto */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.linea-gradiente {
+    /* 1. Definimos un borde sólido transparente como "base" */
+    border-left: 3px solid; 
+    
+    /* 2. Aplicamos el degradado como fuente de la imagen del borde */
+    border-image-source: linear-gradient(to bottom, 
+        transparent 0%, 
+        #8ebaf3 20%, 
+        #ffffff 80%, 
+        transparent 100%
+    );
+
+    /* 3. Esto es obligatorio para que el degradado se vea */
+    border-image-slice: 1;
+
+    /* Espacio entre la línea y el párrafo */
+    padding-left: 50px; 
 }
