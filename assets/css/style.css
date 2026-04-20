@@ -7,7 +7,17 @@
     align-items: center;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll; /* Cambia a scroll para que el fondo no quede fijo en móviles */
+    padding: 60px 0;
+}
+
+body {
+    margin: 0;
+    padding-top: 100px; /* Deja espacio para el navbar fijo en la parte superior */
+}
+
+#fondo {
+  background: linear-gradient(145deg, #0b162a 0%, #9aaed2 100%) !important;
 }
 
 .inter {
@@ -29,13 +39,6 @@
     background: linear-gradient(145deg, #b8d1ff 0%, #e3eaf7 100%) !important;
     border: none !important;  
 }
-
-#fondo {
-  /* ¡IMPORTANTE! Como el header ahora "flota", tapará el inicio del contenido. 
-     Debes darle un margen al body igual a la altura del header. */
-  margin-top: 0px; 
-  background: linear-gradient(145deg, #0b162a 0%, #9aaed2 100%) !important;
-} /* Posiblemente no relevante ya que solo hace que las secciones empiecen despues
 
 /* Customizamos nuestra barra */
 .navbar {
@@ -236,4 +239,75 @@
 
     /* Espacio entre la línea y el párrafo */
     padding-left: 50px; 
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Ajuste de tamaño dinámico para título y texto principal */
+.titulo-principal {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 5rem); /* Escala entre 2.5rem y 5rem según el ancho */
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.descripcion {
+    font-size: clamp(1rem, 1.4vw, 1.1rem); /* Texto flexible para pantallas pequeñas y grandes */
+    margin-top: 20px;
+    max-width: 100%;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* Media query para tablets y pantallas medianas */
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 2rem !important; /* Reduce el tamaño del logo en pantallas medianas */
+    }
+    .navbar-text {
+        font-size: 0.85rem; /* Texto del navbar más pequeño en tablets */
+    }
+}
+
+/* Media query para móviles pequeños */
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Más espacio para navbar si se agranda en móvil */
+    }
+    .pantalla1 {
+        min-height: auto; /* Quita el alto fijo para que el contenido se adapte */
+        flex-direction: column; /* Apila contenido en vertical en móviles */
+        align-items: stretch;
+        padding: 40px 0;
+    }
+    .pantalla1 .container,
+    .pantalla1 .row {
+        width: 100%;
+        margin: 0;
+    }
+    .titulo-principal {
+        text-align: center;
+    }
+    .descripcion {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+    }
+    .linea-gradiente {
+        padding-left: 20px;
+    }
+    .contenedor-perfil {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar .nav-link {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
 }
