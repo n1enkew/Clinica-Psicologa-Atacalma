@@ -311,3 +311,13 @@ body {
         padding-right: 0.5rem !important;
     }
 }
+
+
+.textoDeInformacion {
+    font-size: 0.875rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: #010918;
+}
