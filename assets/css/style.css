@@ -8,16 +8,28 @@
     background-size: cover;
     background-position: center;
     background-attachment: scroll; /* Cambia a scroll para que el fondo no quede fijo en móviles */
-    padding: 60px 0;
+    padding: 0px 0;
+}
+
+.pantalla2 {
+    position:relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Cambia a scroll para que el fondo no quede fijo en móviles */
+    padding: 0px 0;
 }
 
 body {
     margin: 0;
-    padding-top: 100px; /* Deja espacio para el navbar fijo en la parte superior */
 }
 
 #fondo {
-  background: linear-gradient(145deg, #0b162a 0%, #9aaed2 100%) !important;
+  background: linear-gradient(145deg, #1e3c72 0%, #9aaed2 100%) !important;
 }
 
 .inter {
@@ -137,14 +149,6 @@ body {
     color: #1e3c72;
 }
 
-.titulo1 {
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #1e3c72;
-}
-
 .descripcion {
     font-size: 1.1rem;
     margin-top: 20px;
@@ -239,22 +243,26 @@ body {
 }
 
 .linea-gradiente {
-    /* 1. Definimos un borde sólido transparente como "base" */
-    border-left: 3px solid; 
-    
-    /* 2. Aplicamos el degradado como fuente de la imagen del borde */
-    border-image-source: linear-gradient(to bottom, 
-        transparent 0%, 
-        #8ebaf3 20%, 
-        #ffffff 80%, 
-        transparent 100%
-    );
+    border-left: none;
+
+}
+
+@media (min-width: 768px) {/* 2. Aplicamos el degradado como fuente de la imagen del borde */
+    .linea-gradiente {
+        border-left: 3px solid;
+        border-image-source: linear-gradient(to bottom, 
+            transparent 0%, 
+            #8ebaf3 20%, 
+            #ffffff 80%, 
+            transparent 100%
+        );
 
     /* 3. Esto es obligatorio para que el degradado se vea */
-    border-image-slice: 1;
+        border-image-slice: 1;
 
     /* Espacio entre la línea y el párrafo */
-    padding-left: 50px; 
+        padding-left: 30px; 
+    }
 }
 
 .navbar-toggler-icon {
@@ -276,6 +284,8 @@ body {
     max-width: 100%;
     font-family: 'Inter', sans-serif;
     letter-spacing: -0.02em;
+    padding-right: 120px;
+    text-align: justify;
 }
 
 /* Media query para tablets y pantallas medianas */
@@ -291,13 +301,13 @@ body {
 /* Media query para móviles pequeños */
 @media (max-width: 768px) {
     body {
-        padding-top: 120px; /* Más espacio para navbar si se agranda en móvil */
+        padding-top: 110px; /* Más espacio para navbar si se agranda en móvil */
     }
     .pantalla1 {
         min-height: auto; /* Quita el alto fijo para que el contenido se adapte */
         flex-direction: column; /* Apila contenido en vertical en móviles */
         align-items: stretch;
-        padding: 40px 0;
+        padding: 0px 0;
     }
     .pantalla1 .container,
     .pantalla1 .row {
@@ -308,12 +318,10 @@ body {
         text-align: center;
     }
     .descripcion {
-        padding-left: 0;
-        padding-right: 0;
-        max-width: 100%;
-    }
-    .linea-gradiente {
-        padding-left: 20px;
+        border-radius: 8px!important;
+        background: transparent!important;
+        font-family: 'Inter', sans-serif;
+        padding: 20px;
     }
     .contenedor-perfil {
         width: 100%;
@@ -322,34 +330,10 @@ body {
     .navbar-nav {
         text-align: center;
     }
-    .navbar .nav-link {
-        padding-left: 0.5rem !important;
-        padding-right: 0.5rem !important;
+    .navbar-text {
+        display: none; /* Oculta el texto del navbar en móviles para más espacio */
     }
-}
-
-
-.textoDeInformacion {
-    font-size: 0.875rem;
-    font-family: 'inter', arial;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    color: #010918;
-}
-.textoDeInformacion2 {
-    font-size: 0.875rem;
-    font-family: 'Inter', arial;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    color: #010918;
-}
-.titulo1 {
-    font-family: 'Playfair Display', serif;
-    text-alignter;
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -1px;
+    .navbar-brand {
+        padding-left: 1rem !important; /* Reduce aún más el logo en móviles */
+    }
 }
