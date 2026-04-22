@@ -334,3 +334,8 @@ body {
         padding-left: 1rem !important; /* Reduce aún más el logo en móviles */
     }
 }
+
+#sobre-nosotros {
+  scroll-margin-top: 30vh; 
+}
+
