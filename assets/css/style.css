@@ -15,7 +15,7 @@
     position:relative;
     width: 100%;
     height: auto;
-    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: normal;
@@ -113,7 +113,7 @@ body {
     font-size: 0.8rem;
     letter-spacing: -0.02em;
     color: #ccd0ff;
-    margin-bottom: 10px;
+
     font-family: 'Inter', sans-serif;
     font-weight: 600; /* Para que se vea con ese grosor de la foto */
     letter-spacing: 0.2em;
@@ -123,7 +123,7 @@ body {
 .subtitulo2 {
     font-size: 0.8rem;
     letter-spacing: -0.02em;
-    color: #3f3f3f;
+    color: #333333;
     margin-bottom: 10px;
     font-family: 'Inter', sans-serif;
     font-weight: 600; /* Para que se vea con ese grosor de la foto */
@@ -205,6 +205,18 @@ body {
   width: 100%; 
   max-width: 100%; /* Ajusta este valor al tamaño que quieras que tenga la foto */
   margin: 0 auto;   /* Centra el contenedor en la columna */
+}
+
+.foto-ubicacion {
+  position: relative;
+  display: inline-block; /* Para que la caja no sea más ancha que la foto */
+  overflow: hidden;
+  border-radius: 20px; /* Debe coincidir con el redondeado de tu imagen-perfil */
+  /* Eliminamos el inline-block si queremos que respete el centro de la columna */
+  width: 100%; 
+  max-width: 100%; /* Ajusta este valor al tamaño que quieras que tenga la foto */
+  margin: 0 auto;   /* Centra el contenedor en la columna */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
 /* 3. La imagen con bordes redondeados */
