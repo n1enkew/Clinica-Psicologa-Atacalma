@@ -27,10 +27,11 @@
 
 body {
     margin: 0;
+    width: 100%;
 }
 
 #fondo {
-  background: linear-gradient(145deg, #1e3c72 0%, #9aaed2 100%) !important;
+  background: linear-gradient(175deg, #1e3c72 0%, #9aaed2 100%) !important;
 }
 
 .inter {
@@ -38,7 +39,7 @@ body {
 }
 
 .fondoAzulGradiente1 {
-    background: linear-gradient(145deg, #1e3c72 0%, #9aaed2 100%) !important;
+    background: linear-gradient(175deg, #1e3c72 0%, #9aaed2 100%) !important;
 
 }
 
@@ -49,7 +50,7 @@ body {
 }
 
 .fondoAzulGradiente3 {
-    background: linear-gradient(145deg, #b8d1ff 0%, #e3eaf7 100%) !important;
+    background: linear-gradient(175deg, #9aaed2 0%, #1e3c72 100%) !important;
 
 }
 
