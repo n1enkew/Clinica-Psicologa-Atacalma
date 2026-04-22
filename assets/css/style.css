@@ -340,6 +340,10 @@ body {
   scroll-margin-top: 30vh; 
 }
 
+#servicios {
+  scroll-margin-top: 10vh; 
+}
+
 .card {
     background: linear-gradient(175deg, #1e3c72 0%, #262f3f 100%) !important;
 }
