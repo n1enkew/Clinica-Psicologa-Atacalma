@@ -359,3 +359,14 @@ body {
     height: auto;
     width: 170px;
 }
+
+.link-doctoralia {
+    color: #ccd0ff; /* O el color que prefieras para tus subtítulos */
+    text-decoration: none; /* Esto quita la línea de abajo */
+    transition: 0.3s;
+}
+
+.link-doctoralia:hover {
+    color: #ffffff; /* Se ilumina cuando pasas el mouse */
+    text-decoration: underline; /* Aparece la línea solo al tocarlo */
+}
