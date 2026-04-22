@@ -360,13 +360,20 @@ body {
     width: 170px;
 }
 
-.link-doctoralia {
+.link1 {
     color: #ccd0ff; /* O el color que prefieras para tus subtítulos */
     text-decoration: none; /* Esto quita la línea de abajo */
     transition: 0.3s;
 }
 
-.link-doctoralia:hover {
+.link1:hover {
     color: #ffffff; /* Se ilumina cuando pasas el mouse */
     text-decoration: underline; /* Aparece la línea solo al tocarlo */
+}
+
+@media (max-width: 768px) {
+    .link1 {
+        text-decoration: underline !important; /* Forzamos el subrayado */
+        text-underline-offset: 2px; /* Opcional: separa un poquito la línea del texto para que se vea más limpio */
+    }
 }
