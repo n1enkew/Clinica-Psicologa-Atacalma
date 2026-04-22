@@ -14,10 +14,11 @@
 .pantalla2 {
     position:relative;
     width: 100%;
+    height: auto;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: normal;
     background-size: cover;
     background-position: center;
     background-attachment: scroll; /* Cambia a scroll para que el fondo no quede fijo en móviles */
@@ -38,19 +39,20 @@ body {
 
 .fondoAzulGradiente1 {
     background: linear-gradient(145deg, #1e3c72 0%, #9aaed2 100%) !important;
-    border: none !important;  
+
 }
 
 .fondoAzulGradiente2 {
     background-color: none !important;
-    border: none !important;  
+
     backdrop-filter: blur(10px);
 }
 
 .fondoAzulGradiente3 {
     background: linear-gradient(145deg, #b8d1ff 0%, #e3eaf7 100%) !important;
-    border: none !important;  
+
 }
+
 
 /* Customizamos nuestra barra */
 .navbar {
@@ -114,9 +116,19 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 600; /* Para que se vea con ese grosor de la foto */
     letter-spacing: 0.2em;
+    border-radius: 8px;
 }
 
-
+.subtitulo2 {
+    font-size: 0.8rem;
+    letter-spacing: -0.02em;
+    color: #3f3f3f;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /* Para que se vea con ese grosor de la foto */
+    letter-spacing: 0.2em;
+    border-radius: 8px;
+}
 
 .titulo-principal {
     font-family: 'Playfair Display', serif; /* Una letra con "patitas" (Serif) elegante */
@@ -124,6 +136,8 @@ body {
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -1px;
+    border-radius: 8px;
+     /* Para que el fondo no toque el borde izquierdo del texto */
 }
 
 .titulo-principal span {
@@ -151,10 +165,12 @@ body {
 
 .descripcion {
     font-size: 1.1rem;
-    margin-top: 20px;
-    max-width: 450px; /* Para que el texto no se estire demasiado */
+    text-align: justify;
+    max-width: 800px; /* Para que el texto no se estire demasiado */
     font-family: 'Inter', sans-serif;
     letter-spacing: -0.02em;
+    border-radius: 8px;
+    hyphens: auto;
 }
 
 .btn-primario {
@@ -261,41 +277,12 @@ body {
         border-image-slice: 1;
 
     /* Espacio entre la línea y el párrafo */
-        padding-left: 30px; 
+        padding-left: 20px; 
     }
 }
 
 .navbar-toggler-icon {
     filter: invert(1);
-}
-
-/* Ajuste de tamaño dinámico para título y texto principal */
-.titulo-principal {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 5vw, 5rem); /* Escala entre 2.5rem y 5rem según el ancho */
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -1px;
-}
-
-.descripcion {
-    font-size: clamp(1rem, 1.4vw, 1.1rem); /* Texto flexible para pantallas pequeñas y grandes */
-    margin-top: 20px;
-    max-width: 100%;
-    font-family: 'Inter', sans-serif;
-    letter-spacing: -0.02em;
-    padding-right: 120px;
-    text-align: justify;
-}
-
-/* Media query para tablets y pantallas medianas */
-@media (max-width: 992px) {
-    .navbar-brand {
-        font-size: 2rem !important; /* Reduce el tamaño del logo en pantallas medianas */
-    }
-    .navbar-text {
-        font-size: 0.85rem; /* Texto del navbar más pequeño en tablets */
-    }
 }
 
 /* Media query para móviles pequeños */
@@ -309,17 +296,14 @@ body {
         align-items: stretch;
         padding: 0px 0;
     }
-    .pantalla1 .container,
-    .pantalla1 .row {
-        width: 100%;
-        margin: 0;
-    }
+
     .titulo-principal {
         text-align: center;
+        font-size: 4.5rem; /* Reduce el tamaño del título principal en móviles */
+        line-height: 1.2;
     }
     .descripcion {
-        border-radius: 8px!important;
-        background: transparent!important;
+        border-radius: 8px;
         font-family: 'Inter', sans-serif;
         padding: 20px;
     }
