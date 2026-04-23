@@ -111,7 +111,7 @@ body {
 
 .subtitulo1 {
     font-size: 0.8rem;
-    letter-spacing: -0.02em;
+    letter-spacing: clamp(-0.06em, -0.02em, 0.2em);
     color: #ccd0ff;
 
     font-family: 'Inter', sans-serif;
@@ -129,6 +129,7 @@ body {
     font-weight: 600; /* Para que se vea con ese grosor de la foto */
     letter-spacing: 0.2em;
     border-radius: 8px;
+    hyphens: auto;
 }
 
 .titulo-principal {
@@ -339,3 +340,40 @@ body {
   scroll-margin-top: 30vh; 
 }
 
+#servicios {
+  scroll-margin-top: 10vh; 
+}
+
+.card {
+    background: linear-gradient(175deg, #1e3c72 0%, #262f3f 100%) !important;
+}
+
+.preciofondo {
+    background: linear-gradient(175deg, #ececec 0%, #9aaed2 100%) !important;
+    color: rgb(0, 0, 0) !important;
+    padding: 8px 18px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    border: none !important;
+    font-family: 'Inter', sans-serif;
+    height: auto;
+    width: 170px;
+}
+
+.link1 {
+    color: #ccd0ff; /* O el color que prefieras para tus subtítulos */
+    text-decoration: none; /* Esto quita la línea de abajo */
+    transition: 0.3s;
+}
+
+.link1:hover {
+    color: #ffffff; /* Se ilumina cuando pasas el mouse */
+    text-decoration: underline; /* Aparece la línea solo al tocarlo */
+}
+
+@media (max-width: 768px) {
+    .link1 {
+        text-decoration: underline !important; /* Forzamos el subrayado */
+        text-underline-offset: 2px; /* Opcional: separa un poquito la línea del texto para que se vea más limpio */
+    }
+}
