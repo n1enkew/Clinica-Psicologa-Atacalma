@@ -364,5 +364,31 @@ body {
     text-decoration: underline; /* Aparece la línea solo al tocarlo */
 }
 
+/* ==========================================
+   AJUSTES ESPECÍFICOS PARA MODO OSCURO
+   ========================================== */
 
+/* 1. El fondo principal del sitio (id="fondo") */
+body.dark-mode #fondo {
+    /* Cambiamos a un gradiente de azul medianoche a gris oscuro */
+    background: linear-gradient(175deg, #0f172a 0%, #1e293b 100%) !important;
+}
 
+/* 2. El primer gradiente secundario */
+body.dark-mode .fondoAzulGradiente1 {
+    background: linear-gradient(175deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
+/* 3. La barra de navegación (Navbar)
+   Como es transparente, le añadimos un fondo oscuro sutil con opacidad (rgba) 
+   para que los textos sigan siendo legibles cuando hagas scroll sobre el contenido */
+body.dark-mode .fondoAzulGradiente2 {
+    background-color: rgba(15, 23, 42, 0.75) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* 4. El gradiente invertido (Sección de Servicios y precios) */
+body.dark-mode .fondoAzulGradiente3 {
+    /* Invertimos los mismos tonos oscuros para mantener la coherencia */
+    background: linear-gradient(175deg, #1e293b 0%, #0f172a 100%) !important;
+}
