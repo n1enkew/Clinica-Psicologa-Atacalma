@@ -1,28 +1,30 @@
+/* ========================================================================== */
+/* 1. SECCIONES PRINCIPALES                                                      */
+/* ========================================================================== */
 .pantalla1 {
-    position:relative;
-    width: 100%;
-    min-height: 100vh;
+    align-items: center;
+    background-attachment: scroll; /* Cambia a scroll para que el fondo no quede fijo en móviles */
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll; /* Cambia a scroll para que el fondo no quede fijo en móviles */
-    padding: 0px 0;
+    min-height: 100vh;
+    padding: 0;
+    position: relative;
+    width: 100%;
 }
 
 .pantalla2 {
-    position:relative;
-    width: 100%;
-    height: auto;
-
-    display: flex;
-    justify-content: center;
     align-items: normal;
-    background-size: cover;
-    background-position: center;
     background-attachment: scroll; /* Cambia a scroll para que el fondo no quede fijo en móviles */
-    padding: 0px 0;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    width: 100%;
 }
 
 body {
@@ -31,7 +33,7 @@ body {
 }
 
 #fondo {
-  background: linear-gradient(175deg, #1e3c72 0%, #9aaed2 100%) !important;
+    background: linear-gradient(175deg, #1e3c72 0%, #9aaed2 100%) !important;
 }
 
 .inter {
@@ -40,62 +42,53 @@ body {
 
 .fondoAzulGradiente1 {
     background: linear-gradient(175deg, #1e3c72 0%, #9aaed2 100%) !important;
-
 }
 
 .fondoAzulGradiente2 {
-    background-color: none !important;
-
+    background-color: transparent !important;
     backdrop-filter: blur(10px);
 }
 
 .fondoAzulGradiente3 {
     background: linear-gradient(175deg, #9aaed2 0%, #1e3c72 100%) !important;
-
 }
 
-
-/* Customizamos nuestra barra */
+/* ========================================================================== */
+/* 2. BARRA DE NAVEGACIÓN                                                        */
+/* ========================================================================== */
 .navbar {
-    /* 1. Aumentamos el tamaño arriba y abajo (ej: 20px) */
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
     font-family: 'Inter', sans-serif;
     font-weight: 600; /* Para que se vea con ese grosor de la foto */
     letter-spacing: -0.02em;
-    
-    /* 2. Transición suave para cuando cambie la sombra */
+    padding-bottom: 30px !important;
+    padding-top: 30px !important;
     transition: all 0.3s ease;
-  }
-  
-  /* Esta clase hará que la sombra aparezca */
-  .shadow-scroll {
+}
+
+/* Esta clase hará que la sombra aparezca */
+.shadow-scroll {
     box-shadow: 0px 1px 2px 0px rgba(191, 191, 191, 0.692);
-    padding-top: 20px !important; /* Opcional: que se encoja un poquito al bajar */
-    padding-bottom: 20px !important;
-
-    /* Aseguramos que ocupe todo el ancho */
-    width: 100%;
     left: 0;
+    padding-bottom: 20px !important; /* Opcional: que se encoja un poquito al bajar */
+    padding-top: 20px !important;
     right: 0;
-  }
+    width: 100%;
+}
 
-  /* 1. Cambia el color del nombre de la página (Brand) */
+/* 1. Cambia el color del nombre de la página (Brand) */
 .navbar-brand {
     color: #6ba3ff !important; /* Un amarillo dorado, por ejemplo */
-    font-weight: bold !important;
-    font-size: 2.5rem !important;
     font-family: "Playfair Display", serif !important;
+    font-size: 2.5rem !important;
+    font-weight: bold !important;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
 .navbar-text {
-    /* Ajustamos el tamaño para que no compita con el logo */
-    font-size: 0.9rem; 
-    /* Opcional: un poquito de margen arriba si Atacalma es muy alta */
-    margin-top: 10px; 
+    font-size: 0.9rem; /* Ajustamos el tamaño para que no compita con el logo */
     letter-spacing: 0.02em;
+    margin-top: 10px; /* Opcional: un poquito de margen arriba si Atacalma es muy alta */
 }
 
 /* 2. Cambia el color de los enlaces del menú */
@@ -109,189 +102,175 @@ body {
     text-decoration: underline;
 }
 
+/* ========================================================================== */
+/* 3. TIPOGRAFÍA Y TEXTOS                                                     */
+/* ========================================================================== */
 .subtitulo1 {
-    font-size: 0.8rem;
-    letter-spacing: clamp(-0.06em, -0.02em, 0.2em);
+    border-radius: 8px;
     color: #ccd0ff;
-
     font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
     font-weight: 600; /* Para que se vea con ese grosor de la foto */
     letter-spacing: 0.2em;
-    border-radius: 8px;
 }
 
 .subtitulo2 {
-    font-size: 0.8rem;
-    letter-spacing: -0.02em;
-    color: #333333;
-    margin-bottom: 10px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600; /* Para que se vea con ese grosor de la foto */
-    letter-spacing: 0.2em;
     border-radius: 8px;
+    color: #333333;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600; /* Para que se vea con ese grosor de la foto */
     hyphens: auto;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
 }
 
 .titulo-principal {
+    border-radius: 8px;
     font-family: 'Playfair Display', serif; /* Una letra con "patitas" (Serif) elegante */
     font-size: 5rem;
     font-weight: 700;
-    line-height: 1.1;
     letter-spacing: -1px;
-    border-radius: 8px;
-     /* Para que el fondo no toque el borde izquierdo del texto */
+    line-height: 1.1;
 }
 
 .titulo-principal span {
     background: linear-gradient(145deg, #6ba3ff 0%, #b8d1ff 100%);
-    
-    /* 2. El truco: cortamos el fondo siguiendo la forma del texto */
     -webkit-background-clip: text;
     background-clip: text;
-
-    /* 3. Hacemos que el color original del texto sea transparente 
-          para que se vea el fondo de atrás */
     color: transparent;
-
-    /* Opcional: para asegurar que el degradado se vea bien en bloques */
     display: inline-block;
 }
 
 .titulo1 {
-    text-align: center;
+    color: #1e3c72;
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     font-weight: 700;
-    color: #1e3c72;
+    text-align: center;
 }
 
 .descripcion {
-    font-size: 1.1rem;
-    text-align: justify;
-    max-width: 800px; /* Para que el texto no se estire demasiado */
-    font-family: 'Inter', sans-serif;
-    letter-spacing: -0.02em;
     border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
     hyphens: auto;
+    letter-spacing: -0.02em;
+    max-width: 800px; /* Para que el texto no se estire demasiado */
+    text-align: justify;
 }
 
+/* ========================================================================== */
+/* 4. BOTONES                                                                    */
+/* ========================================================================== */
 .btn-primario {
     background-color: #00adef !important;
-    color: white !important;
-    padding: 12px 30px !important;
-    border-radius: 8px !important;
-    font-weight: 600 !important;
     border: none !important;
+    border-radius: 8px !important;
+    color: white !important;
     font-family: 'Inter', sans-serif;
+    font-weight: 600 !important;
+    padding: 12px 30px !important;
 }
 
 .btn-contorno {
-    border: 2px solid #00adef!important;
-    color: white!important;
-    padding: 10px 30px!important;
-    border-radius: 8px!important;
-    background: transparent!important;
+    background: transparent !important;
+    border: 2px solid #00adef !important;
+    border-radius: 8px !important;
+    color: white !important;
     font-family: 'Inter', sans-serif;
+    padding: 10px 30px !important;
 }
 
-
+/* ========================================================================== */
+/* 5. TARJETA / PERFIL DE IMAGEN                                                  */
+/* ========================================================================== */
 /* Para el efecto de la imagen de perfil */
 /* 1. El contenedor debe ser relativo y del mismo tamaño que la imagen */
 .contenedor-perfil {
-  position: relative;
-  display: inline-block; /* Para que la caja no sea más ancha que la foto */
-  overflow: hidden;
-  border-radius: 20px; /* Debe coincidir con el redondeado de tu imagen-perfil */
-  /* Eliminamos el inline-block si queremos que respete el centro de la columna */
-  width: 100%; 
-  max-width: 100%; /* Ajusta este valor al tamaño que quieras que tenga la foto */
-  margin: 0 auto;   /* Centra el contenedor en la columna */
+    border-radius: 20px; /* Debe coincidir con el redondeado de tu imagen-perfil */
+    display: inline-block; /* Para que la caja no sea más ancha que la foto */
+    margin: 0 auto; /* Centra el contenedor en la columna */
+    max-width: 100%; /* Ajusta este valor al tamaño que quieras que tenga la foto */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .foto-ubicacion {
-  position: relative;
-  display: inline-block; /* Para que la caja no sea más ancha que la foto */
-  overflow: hidden;
-  border-radius: 20px; /* Debe coincidir con el redondeado de tu imagen-perfil */
-  /* Eliminamos el inline-block si queremos que respete el centro de la columna */
-  width: 100%; 
-  max-width: 100%; /* Ajusta este valor al tamaño que quieras que tenga la foto */
-  margin: 0 auto;   /* Centra el contenedor en la columna */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border-radius: 20px; /* Debe coincidir con el redondeado de tu imagen-perfil */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    display: inline-block; /* Para que la caja no sea más ancha que la foto */
+    margin: 0 auto; /* Centra el contenedor en la columna */
+    max-width: 100%; /* Ajusta este valor al tamaño que quieras que tenga la foto */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 /* 3. La imagen con bordes redondeados */
-
 .imagen-perfil {
-  display: block;
-  max-width: 100%; /* Ajusta al tamaño de la columna */
-  max-height: 100%; /* Ajusta al tamaño de la columna */
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-  transition: transform 0.5s ease; /* Opcional: para un efecto de zoom */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    display: block;
+    max-height: 100%; /* Ajusta al tamaño de la columna */
+    max-width: 100%; /* Ajusta al tamaño de la columna */
+    transition: transform 0.5s ease; /* Opcional: para un efecto de zoom */
 }
 
 /* 2. La capa del texto (oscura y centrada) */
 .capa-texto {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  max-height: 100%;
-
-  background: rgba(30, 60, 114, 0.8); /* Un azul que combine con tu degradado */
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  opacity: 0; /* Empieza invisible */
-  transition: opacity 0.3s ease; /* Hace que aparezca suavemente */
-  padding: 30px;
-  box-sizing: border-box;
+    align-items: center;
+    background: rgba(30, 60, 114, 0.8); /* Un azul que combine con tu degradado */
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    max-height: 100%;
+    max-width: 100%;
+    opacity: 0; /* Empieza invisible */
+    padding: 30px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: opacity 0.3s ease; /* Hace que aparezca suavemente */
 }
 
 /* 3. ¡EL MOMENTO DEL HOVER! */
 .contenedor-perfil:hover .capa-texto {
-  opacity: 1; /* Se vuelve visible al pasar el mouse */
+    opacity: 1; /* Se vuelve visible al pasar el mouse */
 }
 
 /* Opcional: que la imagen se agrande un poquito al tocarla */
 .contenedor-perfil:hover .imagen-perfil {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
+/* ========================================================================== */
+/* 6. LÍNEAS Y DETALLES DECORATIVOS                                              */
+/* ========================================================================== */
 /* Personalizamos la barra vertical linea 54 */
 .border-start {
-    /* Esto controla que la línea no sea tan alta como toda la sección */
-    border-left: 2px solid rgba(255, 255, 255, 0.5) !important; 
-    
-    /* Añadimos un margen arriba y abajo para que no toque los bordes del texto */
+    border-left: 2px solid rgba(255, 255, 255, 0.5) !important; /* Esto controla que la línea no sea tan alta como toda la sección */
+    margin-bottom: 10px; /* Añadimos un margen arriba y abajo para que no toque los bordes del texto */
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .linea-gradiente {
     border-left: none;
-
 }
 
-@media (min-width: 768px) {/* 2. Aplicamos el degradado como fuente de la imagen del borde */
+/* ========================================================================== */
+/* 7. ESTILOS RESPONSIVOS - TABLET / DESKTOP                                     */
+/* ========================================================================== */
+@media (min-width: 768px) {
+    /* 2. Aplicamos el degradado como fuente de la imagen del borde */
     .linea-gradiente {
+        border-image-source: linear-gradient(to bottom, transparent 0%, #8ebaf3 20%, #ffffff 80%, transparent 100%);
+        border-image-slice: 1; /* 3. Esto es obligatorio para que el degradado se vea */
         border-left: 3px solid;
-        border-image-source: linear-gradient(to bottom, 
-            transparent 0%, 
-            #8ebaf3 20%, 
-            #ffffff 80%, 
-            transparent 100%
-        );
-
-    /* 3. Esto es obligatorio para que el degradado se vea */
-        border-image-slice: 1;
-
-    /* Espacio entre la línea y el párrafo */
-        padding-left: 20px; 
+        padding-left: 20px; /* Espacio entre la línea y el párrafo */
     }
 }
 
@@ -299,49 +278,63 @@ body {
     filter: invert(1);
 }
 
-/* Media query para móviles pequeños */
+/* ========================================================================== */
+/* 8. ESTILOS RESPONSIVOS - MÓVILES                                              */
+/* ========================================================================== */
 @media (max-width: 768px) {
     body {
         padding-top: 110px; /* Más espacio para navbar si se agranda en móvil */
     }
-    .pantalla1 {
-        min-height: auto; /* Quita el alto fijo para que el contenido se adapte */
-        flex-direction: column; /* Apila contenido en vertical en móviles */
-        align-items: stretch;
-        padding: 0px 0;
+
+    .contenedor-perfil {
+        margin-bottom: 30px;
+        width: 100%;
     }
 
-    .titulo-principal {
-        text-align: center;
-        font-size: 4.5rem; /* Reduce el tamaño del título principal en móviles */
-        line-height: 1.2;
-    }
     .descripcion {
         border-radius: 8px;
         font-family: 'Inter', sans-serif;
         padding: 20px;
     }
-    .contenedor-perfil {
-        width: 100%;
-        margin-bottom: 30px;
+
+    .navbar-brand {
+        padding-left: 1rem !important; /* Reduce aún más el logo en móviles */
     }
+
     .navbar-nav {
         text-align: center;
     }
+
     .navbar-text {
         display: none; /* Oculta el texto del navbar en móviles para más espacio */
     }
-    .navbar-brand {
-        padding-left: 1rem !important; /* Reduce aún más el logo en móviles */
+
+    .pantalla1 {
+        align-items: stretch;
+        display: flex;
+        flex-direction: column; /* Apila contenido en vertical en móviles */
+        min-height: auto; /* Quita el alto fijo para que el contenido se adapte */
+        padding: 0;
+    }
+
+    .titulo-principal {
+        font-size: 4.5rem; /* Reduce el tamaño del título principal en móviles */
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .link1 {
+        text-decoration: underline !important; /* Forzamos el subrayado */
+        text-underline-offset: 2px; /* Opcional: separa un poquito la línea del texto para que se vea más limpio */
     }
 }
 
 #sobre-nosotros {
-  scroll-margin-top: 30vh; 
+    scroll-margin-top: 30vh;
 }
 
 #servicios {
-  scroll-margin-top: 10vh; 
+    scroll-margin-top: 10vh;
 }
 
 .card {
@@ -350,13 +343,13 @@ body {
 
 .preciofondo {
     background: linear-gradient(175deg, #ececec 0%, #9aaed2 100%) !important;
-    color: rgb(0, 0, 0) !important;
-    padding: 8px 18px !important;
-    border-radius: 8px !important;
-    font-weight: 600 !important;
     border: none !important;
+    border-radius: 8px !important;
+    color: rgb(0, 0, 0) !important;
     font-family: 'Inter', sans-serif;
+    font-weight: 600 !important;
     height: auto;
+    padding: 8px 18px !important;
     width: 170px;
 }
 
@@ -371,9 +364,31 @@ body {
     text-decoration: underline; /* Aparece la línea solo al tocarlo */
 }
 
-@media (max-width: 768px) {
-    .link1 {
-        text-decoration: underline !important; /* Forzamos el subrayado */
-        text-underline-offset: 2px; /* Opcional: separa un poquito la línea del texto para que se vea más limpio */
-    }
+/* ==========================================
+   AJUSTES ESPECÍFICOS PARA MODO OSCURO
+   ========================================== */
+
+/* 1. El fondo principal del sitio (id="fondo") */
+body.dark-mode #fondo {
+    /* Cambiamos a un gradiente de azul medianoche a gris oscuro */
+    background: linear-gradient(175deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
+/* 2. El primer gradiente secundario */
+body.dark-mode .fondoAzulGradiente1 {
+    background: linear-gradient(175deg, #0f172a 0%, #1e293b 100%) !important;
+}
+
+/* 3. La barra de navegación (Navbar)
+   Como es transparente, le añadimos un fondo oscuro sutil con opacidad (rgba) 
+   para que los textos sigan siendo legibles cuando hagas scroll sobre el contenido */
+body.dark-mode .fondoAzulGradiente2 {
+    background-color: rgba(15, 23, 42, 0.75) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* 4. El gradiente invertido (Sección de Servicios y precios) */
+body.dark-mode .fondoAzulGradiente3 {
+    /* Invertimos los mismos tonos oscuros para mantener la coherencia */
+    background: linear-gradient(175deg, #1e293b 0%, #0f172a 100%) !important;
 }
