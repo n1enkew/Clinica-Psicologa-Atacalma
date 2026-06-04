@@ -62,7 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Limpia el formulario y cierra la ventana emergente automáticamente tras el éxito
                 form.reset();
-                setTimeout(() => { window.close(); }, 1000); 
+                // Cierra la modal automáticamente tras el éxito
+                const modalElement = document.getElementById('contactoModal');
+                const modalBootstrap = bootstrap.Modal.getInstance(modalElement);
+                if (modalBootstrap) {
+                    modalBootstrap.hide();
+                }
             }
         });
     }
