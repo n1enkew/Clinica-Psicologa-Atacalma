@@ -392,3 +392,13 @@ body.dark-mode .fondoAzulGradiente3 {
     /* Invertimos los mismos tonos oscuros para mantener la coherencia */
     background: linear-gradient(175deg, #1e293b 0%, #0f172a 100%) !important;
 }
+
+#themeIcon::after {
+    content: "☀️"; 
+    font-size: 1.2rem; /* Ajusta el tamaño a tu gusto */
+}
+
+/* Cuando el body tiene la clase .dark-mode, cambiamos el icono a un Sol */
+body.dark-mode #themeIcon::after {
+    content: "🌙"; 
+}
