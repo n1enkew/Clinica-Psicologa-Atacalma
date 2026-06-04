@@ -40,10 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
             estructuraHtml += `
                 <article class="col-12 col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0 rounded-4">
-                        <div class="card-body text-center d-flex flex-column">
-                            <h5 class="card-title text-white descripcion text-center">${servicio.titulo}</h5>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-white descripcion">${servicio.titulo}</h5>
                             <p class="fw-bold subtitulo1">${servicio.descripcion}</p>
-                            <span class="mt-auto mx-auto fw-bold descripcion preciofondo">${servicio.precio}</span>
+                            <div class="mt-auto d-flex flex-column gap-2">
+                                <span class="fw-bold descripcion preciofondo">${servicio.precio}</span>
+                                <button type="button" class="btn btn-primary btn-sm btn-agregar-servicio" data-titulo="${servicio.titulo}">
+                                    Agregar a mi lista
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </article>

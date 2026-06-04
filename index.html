@@ -15,6 +15,7 @@
 
     <script defer src="assets/js/script_menu.js"></script>
     <script defer src="assets/js/script_cartas.js"></script>
+    <script defer src="assets/js/script_carrito.js"></script>
     <script defer src="assets/js/script_tema.js"></script>
     <script defer src="assets/js/script_contacto_ventana.js"></script>
     <script defer src="assets/js/script_contacto_validacion.js"></script>
@@ -161,6 +162,21 @@
           
           <div class="row g-4 justify-content-center" id="contenedor-servicios">
               </div>
+
+          <div class="row mt-4">
+              <div class="col-12">
+                  <div class="card border-0 rounded-4 shadow-sm bg-white p-4">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                          <h2 class="h5 mb-0">Lista temporal de servicios</h2>
+                          <button id="vaciar-carrito" type="button" class="btn btn-outline-danger btn-sm">Vaciar lista</button>
+                      </div>
+                      <div id="carrito-mensaje" class="small text-success mb-2"></div>
+                      <div id="carrito-servicios">
+                          <p class="descripcion text-secondary mb-0">No hay servicios seleccionados. Agrega uno desde la lista de servicios.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
         </div>
       </div>
